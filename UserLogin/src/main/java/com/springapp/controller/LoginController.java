@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/UserLogin")
 public class LoginController {
-    @RequestMapping(value = {"LoginForm"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"Login"}, method = RequestMethod.GET)
     public String loginForm(User user) {
         user.setLoginName("");
         user.setPassword("");
         return "LoginForm";
     }
-    @RequestMapping(value = {"Login"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"LoginCheck"}, method = RequestMethod.GET)
     public String login(User user) {
         user.setLoginName("");
         user.setPassword("");
