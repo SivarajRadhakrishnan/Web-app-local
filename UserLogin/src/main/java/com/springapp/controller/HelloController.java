@@ -13,4 +13,9 @@ public class HelloController {
 		model.addAttribute("message", "Hello world!");
 		return "hello";
 	}
+	@RequestMapping(method = RequestMethod.GET)
+	public String printHai(ModelMap model) {
+		model.addAttribute("message", "Hi! hello");
+		return "hello";
+	}
 }
